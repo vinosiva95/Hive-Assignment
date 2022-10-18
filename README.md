@@ -13,4 +13,15 @@ year_id	total_sales
 Time taken: 69.183 seconds, Fetched: 3 row(s)
 
 B. hive> select productline, max(sales) as maximum_sales from sales_order_data_orc group by productline;
+Result
+productline	maximum_sales
+Classic Cars	12001.0
+Motorcycles	11886.6
+Planes	10066.6
+Ships	6960.48
+Trains	8977.05
+Trucks and Buses	8844.12
+Vintage Cars	14082.8
+
+C.
 
