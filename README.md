@@ -23,5 +23,7 @@ Trains	8977.05
 Trucks and Buses	8844.12
 Vintage Cars	14082.8
 
-C.
+C.hive> select sales as Total_sales, sum(sales) as quater_sales, otr_id as Q_id, year_id as Y_id from sales_order_data_ORC group by otr_id, year_id, sales order by sales;
+Result
+
 
