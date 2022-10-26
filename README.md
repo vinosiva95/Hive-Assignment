@@ -41,6 +41,10 @@ E.hive> select quarterly_sales, city from (select sum(sales) as Quarterly_sales,
 Result
 ![image](https://user-images.githubusercontent.com/115145715/198059923-0dee914a-fe13-4bc4-8d85-99cfd0cd3a17.png)
 
+F.hive> select month_id, year_id, quantityordered from (select distinct month_id, year_id, quantityordered, dense_rank() over(partition by year_id order by quantityordered desc) as rank from sales_order_data_orc)a where a.rank =1;
+Result
+![image](https://user-images.githubusercontent.com/115145715/198064536-bdeac0c9-1cd9-4a60-abb5-3bc6583ea36b.png)
+End.
 
 
 
