@@ -32,5 +32,11 @@ Result
 D.hive> select s1.country as Country_on_maximum_sale from sales_order_data_orc s1 where s1.sales in (select max(s2.sales) from sales_order_data_orc s2);
 Result
 ![image](https://user-images.githubusercontent.com/115145715/198056908-15004436-de4e-47e0-bbfa-6b80d90b6815.png)
-D.2.
+
+D.2.hive> select s1.country as Country_on_minimum_sale from sales_order_data_orc s1 where s1.sales in (select min(s2.sales) from sales_order_data_orc s2);
+Result
+![image](https://user-images.githubusercontent.com/115145715/198058115-cc4c3464-e6cf-4b8f-b5e0-43cd3ae0fbc6.png)
+
+E.
+
 
