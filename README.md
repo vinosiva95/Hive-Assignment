@@ -25,7 +25,8 @@ Trucks and Buses	8844.12
 Vintage Cars	14082.8
 ![image](https://user-images.githubusercontent.com/115145715/198043740-7fb15fad-e7f4-4420-bc5a-e0899caaa24b.png)
 
-C.hive> select sales as Total_sales, sum(sales) as quater_sales, otr_id as Q_id, year_id as Y_id from sales_order_data_ORC group by otr_id, year_id, sales order by sales;
+hive> select sales, min(sales) as Minimum_sales, otr_id as Quarter from sales_order_data_orc group by sales, otr_id order by Otr_id limit 1;
 Result
+![image](https://user-images.githubusercontent.com/115145715/198054624-f7c55d98-2293-4139-afda-e4dbe2c17091.png)
 
 
