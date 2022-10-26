@@ -37,6 +37,10 @@ D.2.hive> select s1.country as Country_on_minimum_sale from sales_order_data_orc
 Result
 ![image](https://user-images.githubusercontent.com/115145715/198058115-cc4c3464-e6cf-4b8f-b5e0-43cd3ae0fbc6.png)
 
-E.
+E.hive> select quarterly_sales, city from (select sum(sales) as Quarterly_sales, s.otr_id, s.city from sales_order_data_orc s group by s.otr_id, s.city)a limit 10; 
+Result
+![image](https://user-images.githubusercontent.com/115145715/198059923-0dee914a-fe13-4bc4-8d85-99cfd0cd3a17.png)
+
+
 
 
