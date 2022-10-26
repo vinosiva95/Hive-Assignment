@@ -25,8 +25,12 @@ Trucks and Buses	8844.12
 Vintage Cars	14082.8
 ![image](https://user-images.githubusercontent.com/115145715/198043740-7fb15fad-e7f4-4420-bc5a-e0899caaa24b.png)
 
-hive> select sales, min(sales) as Minimum_sales, otr_id as Quarter from sales_order_data_orc group by sales, otr_id order by Otr_id limit 1;
+c. hive> select sales, min(sales) as Minimum_sales, otr_id as Quarter from sales_order_data_orc group by sales, otr_id order by Otr_id limit 1;
 Result
 ![image](https://user-images.githubusercontent.com/115145715/198054624-f7c55d98-2293-4139-afda-e4dbe2c17091.png)
 
+D.hive> select s1.country as Country_on_maximum_sale from sales_order_data_orc s1 where s1.sales in (select max(s2.sales) from sales_order_data_orc s2);
+Result
+![image](https://user-images.githubusercontent.com/115145715/198056908-15004436-de4e-47e0-bbfa-6b80d90b6815.png)
+D.2.
 
